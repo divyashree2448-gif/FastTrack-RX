@@ -66,7 +66,7 @@ export default function DashboardPage() {
       const { data, error } = await supabase
         .from('prescriptions')
         .select('*')
-        .order('id', { ascending: false });
+        .order('created_at', { ascending: false });
 
       if (error) throw error;
 
